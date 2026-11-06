@@ -46,7 +46,10 @@ for i, p in enumerate(seq):
     P = PRODUCTS[p["prod"]]
     path = render(p, os.path.join(OUT, p["file"]))
     paths.setdefault(p["prod"], []).append(path)
-    rows.append([p["title"], BASE + p["file"], P["board"], "", p["desc"], P["link"],
+    # Pinterest rejects a CSV that repeats a destination link ("Duplicate Pin link"), so every pin
+    # gets its own tracked URL; Etsy ignores the extra parameters and the listing opens as normal.
+    link = f"{P['link']}?utm_source=pinterest&utm_medium=social&utm_campaign={BATCH}&utm_content={p['file'][:-4]}"
+    rows.append([p["title"], BASE + p["file"], P["board"], "", p["desc"], link,
                  f"{d.isoformat()}T{TIMES[slot % len(TIMES)]}", P["kw"]])
 
 csv_path = os.path.join(OUT, f"LifeFreedomStore_pins_{BATCH}.csv")

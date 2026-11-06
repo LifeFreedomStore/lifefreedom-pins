@@ -14,6 +14,11 @@ for f in glob.glob(os.path.join(REPO, "pins", "*", "*.csv")):
     if os.path.abspath(f) != os.path.abspath(path):
         older |= {r[0] for r in list(csv.reader(open(f, encoding="utf-8")))[1:]}
 seen = collections.Counter(r[0] for r in rows)
+links = collections.Counter(r[5] for r in rows)
+old_links = set()
+for f in glob.glob(os.path.join(REPO, "pins", "*", "*.csv")):
+    if os.path.abspath(f) != os.path.abspath(path):
+        old_links |= {r[5] for r in list(csv.reader(open(f, encoding="utf-8")))[1:] if "utm_" in r[5]}
 boards = {"Net Worth Tracker","2027 Planner & Goal Setting","Investment Portfolio Tracker","Small Business Spreadsheets"}
 hype = re.compile(r"\b(ultimate|game-?changer|must-have|best|guaranteed|financial freedom)\b", re.I)
 day_boards = collections.defaultdict(list)
@@ -23,7 +28,8 @@ for t, url, board, thumb, desc, link, pub, kw in rows:
     if len(desc) > 500: errs.append(f"description length {len(desc)}: {t}")
     if board not in boards: errs.append(f"unknown board {board}")
     if thumb: errs.append("thumbnail not blank")
-    if not re.fullmatch(r"https://www\.etsy\.com/listing/\d+/[a-z0-9-]+", link): errs.append(f"link {link}")
+    if not re.fullmatch(r"https://www\.etsy\.com/listing/\d+/[a-z0-9-]+(\?utm_source=pinterest&utm_medium=social&utm_campaign=[\w-]+&utm_content=[\w-]+)?", link): errs.append(f"link {link}")
+    if links[link] > 1 or link in old_links: errs.append(f"duplicate Pin link (Pinterest rejects these): {link}")
     m = re.fullmatch(r"https://lifefreedomstore\.github\.io/lifefreedom-pins/(pins/[^/]+/[^/]+\.png)", url)
     if not m: errs.append(f"media url {url}")
     else:
