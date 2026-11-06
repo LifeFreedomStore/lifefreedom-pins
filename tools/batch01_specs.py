@@ -1,6 +1,7 @@
 """Batch 01 pin specs: 10 pins per live listing (5 approved templates x 2 variants), 40 pins.
 All numbers on the pins are read from the live listing photos (included example data)."""
-S = "/home/claude/pins/screens/"
+import os
+S = os.path.join(os.path.dirname(os.path.abspath(__file__)), "screens") + "/"
 NOTADVICE = " Tracking tool, not financial advice."
 GS = " Instant download for Google Sheets and Excel."
 
