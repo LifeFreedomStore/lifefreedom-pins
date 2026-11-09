@@ -52,14 +52,68 @@
       "notes": "Never say HMRC approved, HMRC recognised, MTD compliant, MTD software or official. Matt (9 Nov 2026) wants bold, question-led advertising for this product: at least half its pins use the 'bold' template with hooks from tools/samples_bookkeeping_bold.py (PINS and HOOKS lists), plus new hooks in the same voice (e.g. 'Are you ready for Self Assessment?', 'Struggling with Self Assessment as a small business owner?'). Hooks may be questions; no fear tactics, no penalty threats, no promised outcomes. MTD hooks must say who it applies to (income over £30,000 from April 2027). Dec–Jan: lean on the 31 January Self Assessment deadline. Pins end with: 'Record-keeping tool, not tax advice.'",
       "style": "bold"
     },
-    "invoices": {
-      "name": "UK Trades Quote & Invoice Template",
+    "invoices-plumber": {
+      "name": "Plumbing Quote & Invoice Template UK",
       "live": false,
       "link": null,
       "board": "Invoice Templates UK",
-      "kw": "invoice template uk, plumbing invoice template, cleaning invoice template, quote template, sole trader",
+      "kw": "plumbing invoice template, plumber invoice uk, quote template, invoice template excel, google sheets",
       "finance": true,
-      "notes": "Seven trade listings (plumbing, cleaning, electrician, builder, landscaping & gardening, handyman, sole trader); each live trade is its own entry once listed. Pins end with: 'Invoice template, not tax advice.'"
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "invoices-cleaning": {
+      "name": "Cleaning Quote & Invoice Template UK",
+      "live": false,
+      "link": null,
+      "board": "Invoice Templates UK",
+      "kw": "cleaning invoice template, cleaning quote template uk, quote template, invoice template excel, google sheets",
+      "finance": true,
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "invoices-electrician": {
+      "name": "Electrician Quote & Invoice Template UK",
+      "live": false,
+      "link": null,
+      "board": "Invoice Templates UK",
+      "kw": "electrician invoice template, electrical quote uk, quote template, invoice template excel, google sheets",
+      "finance": true,
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "invoices-builder": {
+      "name": "Builder Quote & Invoice Template UK",
+      "live": false,
+      "link": null,
+      "board": "Invoice Templates UK",
+      "kw": "builder invoice template, cis invoice template, quote template, invoice template excel, google sheets",
+      "finance": true,
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "invoices-gardener": {
+      "name": "Landscaping & Gardening Quote & Invoice Template UK",
+      "live": false,
+      "link": null,
+      "board": "Invoice Templates UK",
+      "kw": "landscaping invoice template, gardener invoice uk, quote template, invoice template excel, google sheets",
+      "finance": true,
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "invoices-handyman": {
+      "name": "Handyman Quote & Invoice Template UK",
+      "live": false,
+      "link": null,
+      "board": "Invoice Templates UK",
+      "kw": "handyman invoice template uk, quote template, invoice template excel, google sheets",
+      "finance": true,
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "invoices-sole-trader": {
+      "name": "Sole Trader Quote & Invoice Template UK",
+      "live": false,
+      "link": null,
+      "board": "Invoice Templates UK",
+      "kw": "invoice template uk, sole trader invoice template, quote template, invoice template excel, google sheets",
+      "finance": true,
+      "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
     }
   }
 }
