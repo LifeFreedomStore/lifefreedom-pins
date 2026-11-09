@@ -20,7 +20,7 @@ os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
 TIMES = ["08:00:00", "12:30:00", "19:30:00", "21:00:00"]
 
 # per product: alternate templates so variants are spread out
-order = ["hero", "features", "statement", "closeup", "seasonal"]
+order = ["hero", "features", "statement", "closeup", "seasonal", "bold"]
 queues = {}
 for prod, P in PRODUCTS.items():
     by_t = {t: [p for p in P["pins"] if p["template"] == t] for t in order}

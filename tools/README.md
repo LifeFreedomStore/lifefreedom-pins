@@ -18,3 +18,10 @@ To add a product:
 4. Make sure `screens/<key>/` holds real crops from its listing photos.
 
 `build_batch.py` takes 1 or 2 pins per template per product, so the batch can stay within 40 pins as products are added.
+
+## Bold template (from 9 Nov 2026)
+`bold` is a 6th template: a full-bleed Ink or Teal background (`bg`), a huge question or claim (`hook` + `accent`), a Teal answer bar (`answer`), a real screen (optional `crop`), and a CTA line (`cta`).
+
+Question hooks are allowed in this template only. Products with `"style": "bold"` in `products.json` use it for at least half of their pins.
+
+For an example, see `samples_bookkeeping_bold.py` (run it to preview in `out/bold_preview/`).

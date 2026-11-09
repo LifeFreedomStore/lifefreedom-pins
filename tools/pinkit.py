@@ -2,9 +2,12 @@
 Pins are 1000 x 1500 (2:3). Five templates, one function each, all driven by a spec dict:
   hero      bold Ink background, tag pill, product name, device mockup, format badge
   features  Paper background, headline, screen card, 4 ticked benefit lines
-  statement bold one-line statement (no question headlines, runbook asset G lesson), screen below
+  statement bold one-line statement (no questions here; use 'bold' for question hooks), screen below
   closeup   zoomed crop of one real screen + one big callout from that render
   seasonal  timely frame (e.g. new year reset) around the hero screen
+  bold      in-your-face hook: full-bleed Ink or Teal, a huge question or claim in Fraunces, a Teal answer
+            line, a real screen, a CTA bar (added 9 Nov 2026 at Matt's request for the bookkeeping tracker;
+            question hooks are allowed here only, kept huge so they read at feed size)
 Screens are real renders of the built workbooks (each asset's media/render_sheets.py).
 Rules: keyword in the overlay, nothing in the top-right 220 x 220 corner, 60 px side margins,
 headline >= 60 px, wordmark bottom-right, no prices, UK English."""
@@ -251,7 +254,51 @@ def t_seasonal(spec):
     return im
 
 
-TEMPLATES = {"hero": t_hero, "features": t_features, "statement": t_statement, "closeup": t_closeup, "seasonal": t_seasonal}
+def t_bold(spec):
+    """Big hook. spec: hook (question or claim), accent (phrase in Teal/Paper), answer, screen, cta,
+    bg ('ink' default or 'teal'), optional anchor/crop."""
+    teal_bg = spec.get("bg", "ink") == "teal"
+    bg, fg = (TEAL, INK) if teal_bg else (INK, PAPER)
+    im = Image.new("RGB", (W, H), bg)
+    d = ImageDraw.Draw(im)
+    if spec.get("tag"):
+        pill(d, M, 64, spec["tag"], size=28, bg=(INK if teal_bg else TEAL), fg=(PAPER if teal_bg else INK))
+    y = 150
+    # huge hook: up to 4 lines, never below 92 px
+    f, size, lines = fit_lines(d, spec["hook"], fr, W - 2 * M, 150, 92, 4)
+    acc = {w.strip(".,:?!") for w in spec.get("accent", "").lower().split()}
+    acc_col = PAPER if teal_bg else TEAL
+    for line in lines:
+        cx = M
+        words = line.split(" ")
+        for i, wd in enumerate(words):
+            t = wd + (" " if i < len(words) - 1 else "")
+            d.text((cx, y), t, font=f, fill=acc_col if wd.lower().strip(".,:?!") in acc else fg)
+            cx += d.textlength(t, font=f)
+        y += int(size * 1.02)
+    y += 28
+    # answer line in a contrasting bar
+    af = it(40, "Bold")
+    aw = d.textlength(spec["answer"], font=af)
+    assert aw <= W - 2 * M - 56, ("bold answer too long", spec["answer"])
+    d.rounded_rectangle([M, y, M + aw + 56, y + 84], radius=42, fill=(INK if teal_bg else TEAL))
+    d.text((M + 28, y + 42), spec["answer"], font=af, fill=(PAPER if teal_bg else INK), anchor="lm")
+    top = y + 84 + 44
+    src = screen(spec["screen"])
+    if spec.get("crop"):
+        l, t, r, b = spec["crop"]
+        src = src.crop((round(l * src.width), round(t * src.height), round(r * src.width), round(b * src.height)))
+    sh = H - 230 - top
+    assert sh >= 300, ("bold: hook too tall for the screen", spec["hook"])
+    card(im, src, M, top, W - 2 * M, sh, anchor=spec.get("anchor", (0.5, 0.0)), dark=not teal_bg)
+    d.text((M, H - 150), spec["cta"], font=it(36, "Bold"), fill=fg)
+    d.text((M, H - 100), spec.get("badge", "Google Sheets + Excel · Instant download"), font=it(28, "Medium"),
+           fill=(INK if teal_bg else MIST))
+    wordmark(im, W - M, H - 44, ink=fg, slate=(INK if teal_bg else MIST))
+    return im
+
+
+TEMPLATES = {"hero": t_hero, "features": t_features, "statement": t_statement, "closeup": t_closeup, "seasonal": t_seasonal, "bold": t_bold}
 
 
 def render(spec, out):
