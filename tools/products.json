@@ -44,8 +44,8 @@
     },
     "bookkeeping": {
       "name": "UK Bookkeeping & Self Assessment Tracker",
-      "live": false,
-      "link": null,
+      "live": true,
+      "link": "https://www.etsy.com/listing/4613433590/small-business-bookkeeping-spreadsheet",
       "board": "Small Business Spreadsheets",
       "kw": "small business bookkeeping, self assessment uk, bookkeeping spreadsheet uk, sole trader, expense tracker",
       "finance": true,
