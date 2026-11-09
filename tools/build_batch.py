@@ -24,7 +24,8 @@ order = ["hero", "features", "statement", "closeup", "seasonal"]
 queues = {}
 for prod, P in PRODUCTS.items():
     by_t = {t: [p for p in P["pins"] if p["template"] == t] for t in order}
-    q = [by_t[t][i] for i in range(2) for t in order]
+    n_max = max(len(v) for v in by_t.values())   # 1 or 2 pins per template, whatever the specs give
+    q = [by_t[t][i] for i in range(n_max) for t in order if i < len(by_t[t])]
     for n, p in enumerate(q, 1):
         p["file"] = f"{prod}-{p['template']}-{n:02d}.png"
         p["prod"] = prod

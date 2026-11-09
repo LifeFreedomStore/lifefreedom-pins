@@ -1,0 +1,64 @@
+{
+  "_readme": "Product registry for the Monday pin batch builder. Pin ONLY products with \"live\": true and a real Etsy listing URL. To add a product once it is live on Etsy: set live to true, paste its listing URL into link, and check its board exists on Pinterest (exact name). Screens for each product live in tools/screens/<key>/. Facts and numbers on pins must come from those screens or the notes here.",
+  "products": {
+    "networth": {
+      "name": "Net Worth Forecast Tracker 2027",
+      "live": true,
+      "link": "https://www.etsy.com/listing/4610458544/net-worth-tracker-spreadsheet-2027",
+      "board": "Net Worth Tracker",
+      "kw": "net worth tracker spreadsheet, net worth tracker, wealth tracker, google sheets, excel",
+      "finance": true
+    },
+    "planner": {
+      "name": "12 Week Goal Planner 2027",
+      "live": true,
+      "link": "https://www.etsy.com/listing/4610506915/12-week-planner-2027-goal-planner",
+      "board": "2027 Planner & Goal Setting",
+      "kw": "12 week year planner, 2027 goal planner, goal setting planner, google sheets, excel",
+      "finance": false
+    },
+    "portfolio": {
+      "name": "Investment Portfolio Tracker",
+      "live": true,
+      "link": "https://www.etsy.com/listing/4611288088/investment-portfolio-tracker-spreadsheet",
+      "board": "Investment Portfolio Tracker",
+      "kw": "investment portfolio tracker spreadsheet, portfolio tracker, investment tracker, google sheets, excel",
+      "finance": true
+    },
+    "smallbiz": {
+      "name": "Small Business Profit and Growth Tracker",
+      "live": true,
+      "link": "https://www.etsy.com/listing/4611288641/small-business-profit-tracker-profit-and",
+      "board": "Small Business Spreadsheets",
+      "kw": "small business profit tracker, profit and loss spreadsheet, small business spreadsheet, google sheets, excel",
+      "finance": true
+    },
+    "endoflife": {
+      "name": "UK End of Life Planner – If I Die Binder",
+      "live": false,
+      "link": null,
+      "board": "End of Life Planning UK",
+      "kw": "end of life planner, if i die binder uk, death binder, estate planning uk, will template uk",
+      "finance": false,
+      "notes": "UK only (England & Wales, Scotland, Northern Ireland). Fillable A4 PDF + printable PDF + linked tracker + UK will templates with signing guidance. Tone: calm and practical, never fear-based; no legal-advice claims (say 'organiser' and 'will template', never 'legally binding will'). Pins end with: 'An organiser, not legal advice.'"
+    },
+    "bookkeeping": {
+      "name": "UK Bookkeeping & Self Assessment Tracker",
+      "live": false,
+      "link": null,
+      "board": "Small Business Spreadsheets",
+      "kw": "small business bookkeeping, self assessment uk, bookkeeping spreadsheet uk, sole trader, expense tracker",
+      "finance": true,
+      "notes": "Never say HMRC approved, MTD compliant, MTD software or official. Pins end with: 'Record-keeping tool, not tax advice.'"
+    },
+    "invoices": {
+      "name": "UK Trades Quote & Invoice Template",
+      "live": false,
+      "link": null,
+      "board": "Small Business Spreadsheets",
+      "kw": "invoice template uk, plumbing invoice template, cleaning invoice template, quote template, sole trader",
+      "finance": true,
+      "notes": "Seven trade listings (plumbing, cleaning, electrician, builder, landscaping & gardening, handyman, sole trader); each live trade is its own entry once listed. Pins end with: 'Invoice template, not tax advice.'"
+    }
+  }
+}
