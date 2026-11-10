@@ -99,8 +99,8 @@
     },
     "invoices-handyman": {
       "name": "Handyman Quote & Invoice Template UK",
-      "live": false,
-      "link": null,
+      "live": true,
+      "link": "https://www.etsy.com/listing/4613899826/landscaping-and-gardening-invoice",
       "board": "Invoice Templates UK",
       "kw": "handyman invoice template uk, quote template, invoice template excel, google sheets",
       "finance": true,
