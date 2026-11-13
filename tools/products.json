@@ -2,12 +2,13 @@
   "_readme": "Product registry for the Monday pin batch builder. Pin ONLY products with \"live\": true and a real Etsy listing URL. To add a product once it is live on Etsy: set live to true, paste its listing URL into link, and check its board exists on Pinterest (exact name). Screens for each product live in tools/screens/<key>/. Facts and numbers on pins must come from those screens or the notes here. Links use the shop's Share & Save address (https://lifefreedomstore.etsy.com/listing/<id>, from 10 Nov 2026) so pin sales earn the Share & Save fee refund.",
   "products": {
     "networth": {
-      "name": "Net Worth Forecast Tracker 2027",
+      "name": "Net Worth Tracker & Financial Planner",
       "live": true,
       "link": "https://lifefreedomstore.etsy.com/listing/4610458544",
       "board": "Net Worth Tracker",
-      "kw": "net worth tracker spreadsheet, net worth tracker, wealth tracker, google sheets, excel",
-      "finance": true
+      "kw": "net worth tracker spreadsheet, financial planner, 10 year forecast, personal finance, google sheets, excel",
+      "finance": true,
+      "notes": "v1.1 (13 Nov 2026), same listing. Say what's new and true: 10-year forecast with what's driving it (compounding, saving, property, debt paid off); Future Plans for dated life changes (maternity leave pay drop, nursery/childcare, more into a pension), month by month and over 10 years; liquid net worth and the Life Freedom Formula (months your liquid money covers your costs); UK take-home pay and £100k check (GBP file only, say 'UK version'); Example + Blank files, £ and $. Never call it a budget planner or FIRE calculator. Numbers on pins only from tools/screens/networth/. Pins end with: 'Planning tool, not financial advice.'"
     },
     "planner": {
       "name": "12 Week Goal Planner 2027",
