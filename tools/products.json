@@ -116,6 +116,13 @@
       "kw": "invoice template uk, sole trader invoice template, quote template, invoice template excel, google sheets",
       "finance": true,
       "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
+    },
+    "owndesk": {
+      "live": false,
+      "link": "https://lifefreedomstore.etsy.com/listing/4623348423",
+      "board": "Trading Journal & Tracker",
+      "kw": "trading journal app, trading journal spreadsheet, forex trading journal, backtesting, google sheets, excel",
+      "notes": "OwnDesk Trader (App £39 4623348423, Sheet £24 4623361018, Bundle £49 4623355339; live on Etsy 22 Nov 2026). Launch pins are hand-made in pins/owndesk-launch (to 6 Dec). live is false so the weekly builder skips it until screens are added to tools/screens/owndesk/ and Matt asks to include it. Rules: no earnings, win-rate or return claims; say what the tool does; every number is fictional demo data."
     }
   }
 }
