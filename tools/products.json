@@ -118,11 +118,12 @@
       "notes": "Each trade listing is tailored: say what's specific to this trade (its price list, registrations, CIS or the room calculator). Never claim CIS for Cleaning; CIS is optional and off by default for Handyman, Landscaping and Sole Trader. No macros. Pins end with: 'Invoice template, not tax advice.'"
     },
     "owndesk": {
-      "live": false,
+      "live": true,
       "link": "https://lifefreedomstore.etsy.com/listing/4623348423",
       "board": "Trading Journal & Tracker",
       "kw": "trading journal app, trading journal spreadsheet, forex trading journal, backtesting, google sheets, excel",
-      "notes": "OwnDesk Trader (App £39 4623348423, Sheet £24 4623361018, Bundle £49 4623355339; live on Etsy 22 Nov 2026). Launch pins are hand-made in pins/owndesk-launch (to 6 Dec). live is false so the weekly builder skips it until screens are added to tools/screens/owndesk/ and Matt asks to include it. Rules: no earnings, win-rate or return claims; say what the tool does; every number is fictional demo data."
+      "notes": "OwnDesk Trader, an offline trading journal (App £39 listing 4623348423 = this link; Sheet £24 4623361018; Bundle £49 4623355339; live on Etsy 22 Nov 2026). Screens in tools/screens/owndesk are from the product preview with fictional demo data (strategy 'Example TP', 'Example account'); use only numbers and features visible there. What it does: every result in R, pips and £ side by side with n on every stat; pre-trade checklist scored against the trader's own rules; strategy health verdict (Too early, Monitor, Fix execution, Continue, Kill); Monte Carlo of the trader's own trades; journal; one-time download, works offline, no subscription; also sold as an Excel / Google Sheets journal. Never claim earnings, returns, win rates or 'profitable'; no fear or hype; say what the tool does. Launch pins are already scheduled 23 Nov to 6 Dec (pins/owndesk-launch): in the batch built on 30 Nov, give OwnDesk Trader 2 pins dated 7 Dec or later; from 14 Dec treat it as an established product. End every description with: \"A record-keeping and statistics tool, not investment advice.\"",
+      "finance": true
     }
   }
 }
